@@ -15,6 +15,10 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
+        <%= cl_image_tag("https://res.cloudinary.com/muna773/image/upload/v1626404083/uxabbxvliaouloy7qktp.jpg",
+      width: 400, height: 300, crop: :fill) %>
+      <%= cl_image_tag("https://res.cloudinary.com/muna773/image/upload/v1626404229/qpauankyg9phix3da3mc.jpg",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
         <td><%= article.body %></td>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
